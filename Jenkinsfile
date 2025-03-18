@@ -37,10 +37,8 @@ pipeline {
 
           script{
 
-
-
-          sh ‘docker login -u tusharjadhav2386 -p tushar2386’
-          sh ‘docker push dockerimagejenkine/app ’
+          sh 'docker login -u tusharjadhav2386 -p tushar@2386'
+          sh 'docker push dockerimagejenkine/app '
 
 
 
