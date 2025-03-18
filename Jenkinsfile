@@ -24,7 +24,7 @@ pipeline {
         {
         steps{
           script{
-          sh 'docker build -t app'
+          sh 'docker build -t app .'
           }
         }
         }
