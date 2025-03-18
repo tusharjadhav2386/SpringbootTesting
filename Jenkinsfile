@@ -37,12 +37,12 @@ pipeline {
 
           script{
 
-          withCredentials([string(credentialsId: ‘dockerhub_pwd’, variable: ‘dockerhubpwd’)]) {
 
-          sh ‘docker login -u tusharjadhav2386 -p ${dockerhubpwd}’
+
+          sh ‘docker login -u tusharjadhav2386 -p tushar@2386’
           sh ‘docker push dockerimagejenkine/app ’
 
-          }
+
 
               }
             }
