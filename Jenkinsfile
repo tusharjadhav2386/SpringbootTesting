@@ -20,6 +20,7 @@ pipeline {
           sh 'mvn test'
         }
         }
+
         stage('Build docker image')
         {
         steps{
@@ -28,6 +29,19 @@ pipeline {
           }
         }
         }
+        stage()
+        {
+          steps{
+          script{
+          withCredentials([string(credentialsId: ‘tusharjadhav2386’, variable: ‘tushar@2386’)]) {
+          sh ‘docker login -u tusharjadhav2386 -p ${tushar@2386}’
+          sh ‘docker push usharjadhav2386/dockerimagejenkine: app ’
+          }
+
+          }
+        }
+
+
 
 
          }
