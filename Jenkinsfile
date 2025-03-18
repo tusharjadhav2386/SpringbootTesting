@@ -33,8 +33,8 @@ pipeline {
         {
           steps{
           script{
-          withCredentials([string(credentialsId: ‘tusharjadhav2386’, variable: ‘tushar@2386’)]) {
-          sh ‘docker login -u tusharjadhav2386 -p ${tushar@2386}’
+          withCredentials([string(credentialsId: ‘tusharjadhav2386’, variable: ‘tushar2386’)]) {
+          sh ‘docker login -u tusharjadhav2386 -p ${tushar2386}’
           sh ‘docker push usharjadhav2386/dockerimagejenkine: app ’
           }
 
