@@ -31,6 +31,15 @@ pipeline {
         }
         }
 
+        stage('docker run')
+        {
+         steps{
+         script{
+         sh 'docker run -p 9090:8081 springboottesting-0.0.1-snapshott.jar'
+         }
+         }
+        }
+
         stage('Push Docker Image')
         {
           steps{
