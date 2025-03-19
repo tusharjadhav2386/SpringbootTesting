@@ -26,7 +26,7 @@ pipeline {
         {
         steps{
           script{
-          sh 'docker build -t springboottesting .'
+          sh 'docker build -t springboottesting1 .'
           }
         }
         }
@@ -35,7 +35,7 @@ pipeline {
         {
          steps{
          script{
-         sh 'docker run -p 9090:8081 springboottesting '
+         sh 'docker run -p 9090:8081 springboottesting1 '
          }
          }
         }
@@ -47,8 +47,8 @@ pipeline {
           script{
 
           sh 'docker login -u tusharjadhav2386 -p tushar@2386'
-          sh 'docker tag app tusharjadhav2386/dockerimagejenkine:springboottesting'
-          sh 'docker push tusharjadhav2386/dockerimagejenkine:springboottesting'
+          sh 'docker tag springboottesting1 tusharjadhav2386/testingdocker:springboottesting1'
+          sh 'docker push tusharjadhav2386/testingdocker:springboottesting1'
 
 
 
