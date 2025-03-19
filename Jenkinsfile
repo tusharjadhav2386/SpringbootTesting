@@ -50,7 +50,7 @@ pipeline {
 
          }
 
-          stage('docker run')
+          stage('RunDocr image')
         {
          steps{
          script{
