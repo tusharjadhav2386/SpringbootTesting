@@ -31,14 +31,7 @@ pipeline {
         }
         }
 
-        stage('docker run')
-        {
-         steps{
-         script{
-         sh 'docker run -p 9090:8081 springboottesting1 '
-         }
-         }
-        }
+
 
         stage('Push Docker Image')
         {
@@ -57,6 +50,14 @@ pipeline {
 
          }
 
+          stage('docker run')
+        {
+         steps{
+         script{
+         sh 'docker run -p 9090:8081 springboottesting1 '
+         }
+         }
+        }
 
 
       }
